@@ -1,16 +1,10 @@
 <template>
-  <div class="home">
-    <!-- 副标题 -->
-    <NavItem class="nav"></NavItem>
-  </div>
+  <div class="mine">我是我的</div>
 </template>
 
 <script>
-import NavItem from "@/components/NavItem.vue";
 export default {
-  components: {
-    NavItem,
-  },
+  components: {},
   data() {
     return {};
   },
