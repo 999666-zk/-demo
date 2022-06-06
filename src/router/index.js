@@ -28,6 +28,11 @@ const routes = [
         path: "mine",
         component: () => import("@/views/Mine.vue"),
       },
+      {
+        path: "text",
+        name: "text",
+        component: () => import("@/views/Text.vue"),
+      },
     ],
   },
 ];

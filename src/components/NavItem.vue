@@ -29,9 +29,7 @@ export default {
       // 获取频道列表
       PinDaoList: [],
       // active 选中的值
-      active: Number(localStorage.getItem("activeIdx"))
-        ? Number(localStorage.getItem("activeIdx"))
-        : 0,
+      active: 0,
     };
   },
   computed: {},

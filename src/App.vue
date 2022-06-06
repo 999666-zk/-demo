@@ -1,10 +1,24 @@
 <template>
   <div id="app">
     <!-- 内容 -->
-    <transition>
+    <transition name="myanimation">
       <router-view></router-view>
     </transition>
   </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.myanimation-enter-active {
+  animation: bounce-in 0.6s;
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+</style>

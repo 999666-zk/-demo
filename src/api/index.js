@@ -16,6 +16,13 @@ export const allPinDaoItemList = (params) => {
     params,
   });
 };
+// 文章的详细内容
+export const getInnerText = (article_id) => {
+  return request({
+    url: `/v1_0/articles/${article_id}`,
+    method: "GET",
+  });
+};
 
 // 请求手机验证码
 export const sendSSM = (mobile) => {

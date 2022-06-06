@@ -11,7 +11,7 @@
       <van-nav-bar fixed z-index="10">
         <template #left>
           <van-icon name="guide-o" size="18" />
-          <div>迅捷头条</div>
+          <div @click="backHome">迅捷头条</div>
         </template>
         <template #right>
           <van-icon name="search" size="18" />
@@ -19,7 +19,9 @@
       </van-nav-bar>
 
       <!-- 内容 二级路由挂载点 -->
-      <router-view></router-view>
+      <transition name="myanimation">
+        <router-view></router-view>
+      </transition>
     </div>
 
     <!-- footer -->
@@ -37,7 +39,12 @@ export default {
     return {};
   },
   computed: {},
-  methods: {},
+  methods: {
+    // 点击login返回主页面
+    backHome: function () {
+      this.$router.push({ path: "/layout/home" });
+    },
+  },
   created() {},
   mounted() {},
 };
@@ -57,6 +64,24 @@ export default {
   color: #fff;
   .van-icon {
     color: #fff;
+  }
+  .logo {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.myanimation-enter-active {
+  animation: bounce-in 0.6s;
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 </style>

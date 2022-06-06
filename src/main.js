@@ -22,6 +22,11 @@ import {
   Card,
   Loading,
   SwipeCell,
+  PullRefresh,
+  List,
+  Image,
+  Row,
+  Col,
 } from "vant";
 Vue.use(Button);
 Vue.use(NavBar);
@@ -37,6 +42,11 @@ Vue.use(CountDown);
 Vue.use(Card);
 Vue.use(SwipeCell);
 Vue.use(Loading);
+Vue.use(PullRefresh);
+Vue.use(List);
+Vue.use(Image);
+Vue.use(Row);
+Vue.use(Col);
 
 // 移动端兼容
 import "amfe-flexible";
